@@ -13,8 +13,20 @@ app.use(express.json());
 
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
+//Guto.......................................................................
+app.get('/api/cursos', async (req, res) => {
+  const { data, error } = await supabase.from('cursos').select('*');
+  if (error) return res.status(400).json({ error: error.message });
+  res.json(data);
+});
+
+//Rhuan......................................................................
 
 
+//Mauricio...................................................................
+
+
+//Emanuel....................................................................
 
 
   
@@ -47,3 +59,5 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`API rodando na porta ${PORT}`));
+
+
