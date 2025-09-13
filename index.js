@@ -24,7 +24,13 @@ app.get('/api/cursos', async (req, res) => {
 
 
 //Mauricio...................................................................
-
+app.put('/api/cursos/:id', async (req, res) => {
+  const { id } = req.params;
+  const { titulo, descricao, carga_horaria } = req.body;
+  const { data, error } = await supabase.from('cursos').update({ titulo, descricao, carga_horaria }).eq('id', id);
+    if (error || !data || data.length === 0) {
+}
+});
 
 //Emanuel....................................................................
 
