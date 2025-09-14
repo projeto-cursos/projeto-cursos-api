@@ -20,6 +20,11 @@ app.get('/api/cursos', async (req, res) => {
   res.json(data);
 });
 
+app.post("/api/cursos", async (req, res) => {
+  const { titulo, descricao, carga_horaria } = req.body;
+});
+
+
 //Rhuan......................................................................
 
 
