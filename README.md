@@ -36,7 +36,7 @@ O objetivo é fornecer endpoints RESTful para **gerenciamento de [escreva aqui, 
 
 Clone este repositório:
 
-git clone https://github.com/yukasdev01/projeto-cursos-api.git
+git clone https://github.com/projeto-cursos/projeto-cursos-api.git
 cd projeto-cursos-api
 
 
